@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABESIT Group Of Institution</title>
+  <style>
+    h1,
+    h3 {
+      color: red;
+      background-color: yellow;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      height: 150px;
+      border: 2px solid red;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+    }
+
+    #tab {
+      display: flex;
+      justify-content: center;
+    }
+
+    .highlight {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> ABOUT MYSELF</h1>
+  <p> I am Utkarsh Aggarwal, I live in Ghaziabad. I am currently pursuing B.Tech from ABESIT.</p>
+
+  <h3>ABES Institute of Technology Result</h3>
+ 
+  <div id="tab">
+    <table>
+      <tr>
+        <th>S no.</th>
+        <th>NAME = Utkarsh Aggarwal</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>ENGG.PHYSICS</td>
+        <td class="td">45</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>ENGG.MATHEMATICS</td>
+        <td class="td">67</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>SOFT SKILLS</td>
+        <td class="td">57</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>ELECTRICAL</td>
+        <td class="td">64</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>MECHANICAL</td>
+        <td class="td">54</td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    var rows = document.querySelectorAll("table tr");
+
+    for (var i = 1; i < rows.length; i++) {
+      var marks = parseInt(rows[i].querySelector(".td").innerText);
+
+      if (marks < 50) {
+        rows[i].classList.add("highlight");
+      }
+    }
+  </script>
+</body>
+
+</html>
+```
