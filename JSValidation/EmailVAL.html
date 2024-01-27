@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailVAL</title>
+</head>
+<body>
+    <script>
+        function val(){
+            var email = document.getElementById("email").value;
+            var arr = email.split('@');
+            if(arr.length==2){
+                var dot = arr[1].split('.');
+                if(dot.length>=2 && dot.length<=3)
+                    alert("Valid");
+                else
+                    alert("Invalid");
+            }
+            else
+            alert("Invalid");
+        }
+    </script>
+    <form>
+      email <input type="text" id="email">
+       <button onclick="val()">Validate</button>
+    </form>
+</body>
+</html>
